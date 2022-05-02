@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+Formulario
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('login') }}" method="post">
+   <div>
+      <p>Nombre:</label>
+      <input type="text" name="nombre" placeholder="Enter Your First Name">     
+   </div>
+   <div>
+      <label>Apellido:</label>
+      <input type="text" name="apellido" placeholder="Enter your Last Name">
+   </div>
+   <div>
+      <label>Ocupación:</label>
+      <input type="text" name="ocupacion" placeholder="Enter your Ocupation">
+   </div>
+   <div>
+      <label>Fecha de nacimiento:</label>
+      <input type="date" name="fecha">
+   </div>
+   <div>
+      <label>Correo:</label>
+      <input type="text" name="correo" placeholder="Enter your Email">
+   </div>
+   <div>
+      <label>Celular:</label>
+      <input type="tel" name="numero" placeholder="Enter your Phone">
+   </div>
+   <div>
+      <label>Constraseña:</label>
+      <input type="password" name="constraseña" placeholder="Enter your Password">
+   </div>
+   <div class="button">
+      <button>Enviar</button>
+   </div>
+</form>
+{% endblock %}
